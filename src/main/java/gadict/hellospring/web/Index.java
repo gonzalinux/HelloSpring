@@ -11,7 +11,29 @@ public class Index {
 
     @GetMapping
     public String index(Model model) {
-        model.addAttribute("message", "hola2 klk");
-        return "root";
+        return "index";
     }
+
+    @GetMapping("/en/survey")
+    public String enSurvey(Model model) {
+        return "survey";
+    }
+
+    @GetMapping("/es/survey")
+    public String esSurvey(Model model) {
+        return "survey-es";
+    }
+
+    @GetMapping("/en/submitted")
+    public String enSubmitted(Model model) {
+        return "submitted";
+    }
+
+    @GetMapping("/es/submitted")
+    public String esSubmitted(Model model) {
+        return "submitted-es";
+    }
+
+
+
 }

@@ -1,0 +1,226 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, ">
+    <title>Encuesta de Dani</title>
+    <link href="../../../../../../Desktop/formulario/style.css" rel="stylesheet" />
+    <link rel="icon" type="image/x-icon" href="/media/me.png">
+    <script src="../../../../../../Desktop/formulario/scripts.js"></script>
+</head>
+
+<body>
+    <div class="square">
+        <h1 class="title"> <u class="title-underline">Encuesta</u></h1>
+        <p class="description"> ¡Buenas! Me llamo Daniel, tengo 19 años y estoy estudiando ingeniería del software (en
+            inglés). Aquí
+            encontrarás un cuestionario que he hecho no solo para mejorar mis competencias en diseño web, sino
+            también para
+            poder realizar un estudio sobre un tema que me resulta muy interesante: la música y las plataformas de
+            streaming. ¡Disfrútalo!
+        </p>
+
+        <form class="form" id="musicForm">
+
+            <div class="text-input-box">
+                <p class="question">1) Género (opcional)</p>
+                <div class="radio-box">
+                    <label class="custom-radio" for="male">
+                        <input type="radio" name="question1" value="Male" id="male" class="circle-radio">
+                        <span class="radio-mark"></span>
+                        Hombre
+                    </label>
+                    <label class="custom-radio" for="female">
+                        <input type="radio" name="question1" value="Female" id="female" class="circle-radio">
+                        <span class="radio-mark"></span>
+                        Mujer
+                    </label>
+                    <label class="custom-radio" for="non-binary">
+                        <input type="radio" name="question1" value="Non-binary" id="non-binary" class="circle-radio">
+                        <span class="radio-mark"></span>
+                        No binario
+                    </label>
+                    <label class="custom-radio" for="other-gender">
+                        <input type="radio" name="question1" value="Other" id="other-gender" class="circle-radio">
+                        <span class="radio-mark"></span>
+                        Otro
+                    </label>
+                </div>
+            </div>
+
+            <div class="select-input-box">
+                <p class="question"> 2) Selecciona tu rango de edad (opcional) </p>
+                <select name="question2" class="combobox">
+                    <option disabled selected>Elige una opción</option>
+                    <option value="1 interval"> - 18 </option>
+                    <option value="2 interval"> 18 - 24 </option>
+                    <option value="3 interval"> 25 - 34 </option>
+                    <option value="4 interval"> 35 - 44 </option>
+                    <option value="5 interval"> 45 - 54 </option>
+                    <option value="6 interval"> 55 - 64 </option>
+                    <option value="7 interval"> 65 + </option>
+                </select>
+            </div>
+
+            <div class="range-input-box">
+                <p class="question"> 3) En una escala del 0 al 10, ¿cuanta música escuchas diariamente? </p>
+                <div class="range-box">
+                    <input type="range" min="0" max="10" step="1" class="slider" id="range1" name="question3">
+                    <label class="value" id="value1" for="range1"></label>
+                </div>
+                <nu class="warning" id="warning3" hidden> Campo requerido </nu>
+            </div>
+
+            <div class="select-input-box">
+                <p class="question"> 4) ¿Qué genero de música escuchas más?</p>
+                <select name="question4" class="combobox" required>
+                    <option disabled selected> Elige una opción</option>
+                    <option value="pop"> Pop </option>
+                    <option value="rock"> Rock </option>
+                    <option value="trap"> Rap </option>
+                    <option value="alternative"> Alternativo </option>
+                    <option value="hip-hop"> Hip-Hop </option>
+                    <option value="classic"> Clásica </option>
+                    <option value="metal"> Metal </option>
+                    <option value="r&b"> R&B </option>
+                    <option value="electronic"> Electrónica </option>
+                    <option value="jazz"> Jazz </option>
+                    <option value="indie"> Indie </option>
+                    <option value="reggaeton"> Reguetón </option>
+                    <option value="other-genre"> Otro </option>
+                </select>
+                <nu class="warning" id="warning4" hidden> Campo requerido </nu>
+            </div>
+
+            <div class="text-input-box">
+                <p class="question"> 5) ¿Utilizas plataformas de streaming? </p>
+                <div class="radio-box">
+                    <label class="custom-radio">
+                        <input type="radio" name="question5" value="yes" class="circle-radio">
+                        <span class="radio-mark"></span>
+                        Si
+                    </label>
+                    <label class="custom-radio">
+                        <input type="radio" name="question5" value="no" class="circle-radio">
+                        <span class="radio-mark"></span>
+                        No
+                    </label>
+                </div>
+                <nu class="warning" id="warning5" hidden> Campo requerido </nu>
+            </div>
+
+            <div class="select-input-box">
+                <p class="question"> 6) ¿A cuál le das mas uso? </p>
+                <select name="question6" class="combobox">
+                    <option disabled selected>Elige una opción</option>
+                    <option value="spotify"> Spotify </option>
+                    <option value="apple-music"> Apple Music </option>
+                    <option value="amazon-music"> Amazon Music </option>
+                    <option value="youtube"> Youtube </option>
+                    <option value="tidal"> Tidal </option>
+                    <option value="deezer"> Deezer </option>
+                    <option value="soundcloud"> SoundCloud </option>
+                    <option value="other"> Otro </option>
+                </select>
+                <nu class="warning" id="warning6" hidden> Campo requerido </nu>
+            </div>
+
+            <div class="text-input-box">
+                <p class="check-question"> 7) ¿Tienes membresía de pago en alguna de estas plataformas? </p>
+                <div class="radio-box">
+                    <label class="custom-radio">
+                        <input type="radio" name="question7" value="yes" class="circle-radio">
+                        <span class="radio-mark"></span>
+                        Si
+                    </label>
+                    <label class="custom-radio">
+                        <input type="radio" name="question7" value="no" class="circle-radio">
+                        <span class="radio-mark"></span>
+                        No
+                    </label>
+                </div>
+                <nu class="warning" id="warning7" hidden> Campo requerido </nu>
+            </div>
+
+            <div class="text-input-box">
+                <p class="question">8) ¿Cuál es tu característica favorita de este tipo de membresía?</p>
+                <input type="text" class="text-input" name="question8">
+                <nu class="warning" id="warning8" hidden> Campo requerido</nu>
+            </div>
+
+            <div class="text-input-box">
+                <p class="question">9) ¿Hay alguna función que te gustaría que esta plataforma añadiera para sus
+                    usuarios premium? </p>
+                <input type="text" class="text-input" name="question9">
+                <nu class="warning" id="warning9" hidden> Campo requerido </nu>
+            </div>
+
+            <div class="text-input-box">
+                <p class="check-question"> 10) ¿Te descargas música para escucharla sin conexión? </p>
+                <div class="radio-box">
+                    <label class="custom-radio">
+                        <input type="radio" name="question10" value="yes" class="circle-radio">
+                        <span class="radio-mark"></span>
+                        Si
+                    </label>
+                    <label class="custom-radio">
+                        <input type="radio" name="question10" value="no" class="circle-radio">
+                        <span class="radio-mark"></span>
+                        No
+                    </label>
+                </div>
+                <nu class="warning" id="warning10" hidden> Campo requerido </nu>
+            </div>
+
+            <div class="text-input-box">
+                <p class="check-question"> 11) ¿Sueles comprar música en formato físico (CDs, vinilos... etc)? </p>
+                <div class="radio-box">
+                    <label class="custom-radio"> <input type="radio" name="question11" value="option1"
+                            class="circle-radio"> <span class="radio-mark"></span> Si, regularmente </label>
+                    <label class="custom-radio"> <input type="radio" name="question11" value="option2"
+                            class="circle-radio"> <span class="radio-mark"></span> Ocasionalmente </label>
+                    <label class="custom-radio"> <input type="radio" name="question11" value="option3"
+                            class="circle-radio"> <span class="radio-mark"></span> Rara vez </label>
+                    <label class="custom-radio"> <input type="radio" name="question11" value="option4"
+                            class="circle-radio"> <span class="radio-mark"></span> Nunca </label>
+                </div>
+                <nu class="warning" id="warning11" hidden> Campo requerido </nu>
+            </div>
+
+            <div class="text-input-box">
+                <p class="check-question"> 12) ¿Asistes a conciertos en vivo? </p>
+                <div class="radio-box">
+                    <label class="custom-radio"> <input type="radio" name="question12" value="option1"
+                            class="circle-radio"> <span class="radio-mark"></span> Si, frecuentemente </label>
+                    <label class="custom-radio"> <input type="radio" name="question12" value="option2"
+                            class="circle-radio"> <span class="radio-mark"></span> De vez en cuando </label>
+                    <label class="custom-radio"> <input type="radio" name="question12" value="option3"
+                            class="circle-radio"> <span class="radio-mark"></span> Solo cuando son mis artistas
+                        favoritos </label>
+                    <label class="custom-radio"> <input type="radio" name="question12" value="option4"
+                            class="circle-radio"> <span class="radio-mark"></span> No </label>
+                </div>
+                <nu class="warning" id="warning12" hidden> Campo requerido</nu>
+            </div>
+
+            <div class="range-input-box">
+                <p class="question">13) Finalmente, por favor valora esta encuesta (estética, accesibilidad, claridad de
+                    las preguntas...) y deja cualquier sugerencia que tengas para su mejora. </p>
+                <div class="range-box">
+                    <input type="range" min="0" max="10" step="1" class="slider" id="range2" name="question13">
+                    <label class="value" id="value2" for="range2"></label>
+                </div>
+                <nu class="warning" id="warning13" hidden> Campo requerido </nu>
+                <input type="text" class="text-input-final" name="comment">
+            </div>
+
+            <button class="save-button" type="submit">Send</button>
+            <nu class="finalWarning" id="finalWarning" hidden> Algunos campos siguen vacíos </nu>
+        </form>
+
+    </div>
+    <p class="footer"> From the desk of <a href="https://github.com/daniherurb" target="_blank"
+            style="text-decoration: none;"> <u>@daniherurb</u></a></p>
+</body>
+
+</html>

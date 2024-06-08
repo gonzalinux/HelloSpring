@@ -4,18 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, ">
     <title>Welcome!</title>
-    <link rel="icon" type="image/x-icon" href="/media/me.png">
-    <link href="../../../../../../Desktop/formulario/style.css" rel="stylesheet" />
-    <script src="../../../../../../Desktop/formulario/scripts.js"></script>
+    <link rel="icon" type="image/x-icon" th:href="@{/media/me.png}">
+    <link th:href="@{/style.css}" rel="stylesheet" />
+    <script  th:src="@{/scripts.css}"></script>
 </head>
 
 <body class="body-languages">
     <div class="languages-container">
         <p class="choose-text">Choose your language</p>
-        <a href="survey-es.html" class="language">
+        <a href="/es/survey" class="language">
             Español
         </a>
-        <a href="survey.html" class="language">
+        <a href="/en/survey" class="language">
             English
         </a>
         <p class="footer-languages"> From the desk of <a href="https://github.com/daniherurb" target="_blank"

@@ -2,10 +2,10 @@
 
 document.addEventListener("DOMContentLoaded", function() {
     function updateValue() {
-        var slider = document.getElementById("range1");
-        var value = document.getElementById("value1");
-        var slider2 = document.getElementById("range2");
-        var value2 = document.getElementById("value2");
+        let slider = document.getElementById("range1");
+        let value = document.getElementById("value1");
+        let slider2 = document.getElementById("range2");
+        let value2 = document.getElementById("value2");
         value.textContent = slider.value;
         value2.textContent = slider2.value;
     }
@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
     function showFinalWarning() {
         let data = new FormData(document.getElementById('musicForm'));
-        var completed = true;
+        let completed = true;
         for (let i=3; i <=13; i++){
             var question = 'question' + i;
             if (!data.has(question) || !data.get(question)) {
@@ -45,7 +45,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
         e.preventDefault();
         let data = new FormData(this);
-        var completed = true;
+        let completed = true;
         for (let i=3; i <=13; i++){
             var question = 'question' + i;
             var warning = document.getElementById('warning' + i);
@@ -69,12 +69,12 @@ document.addEventListener("DOMContentLoaded", function() {
         .then(response => response.json)
         .then(data => {
             console.log(data);
-            var currentPath = window.location.pathname;
+            let currentPath = window.location.pathname;
 
-            if (currentPath.includes("survey-es.html")) {
-                window.location.href = "submitted-es.html";
+            if (currentPath.includes("es")) {
+                window.location.href = "/es/submitted";
             } else {
-                window.location.href = "submitted.html";
+                window.location.href = "/en/submitted";
             }
         })
         .catch(error => {
@@ -91,15 +91,15 @@ document.addEventListener("DOMContentLoaded", function() {
 // submitted screen scripts
 
 function dissapearX(){
-    var xIcon = document.getElementById('icon-x');
-    var twitterIcon = document.getElementById('icon-t');
+    let xIcon = document.getElementById('icon-x');
+    let twitterIcon = document.getElementById('icon-t');
     xIcon.style.display = 'none';
     twitterIcon.style.display = 'flex';
 }
 
 function appearX(){
-    var xIcon = document.getElementById('icon-x');
-    var twitterIcon = document.getElementById('icon-t');
+    let xIcon = document.getElementById('icon-x');
+    let twitterIcon = document.getElementById('icon-t');
     xIcon.style.display = 'flex';
     twitterIcon.style.display = 'none';
 }

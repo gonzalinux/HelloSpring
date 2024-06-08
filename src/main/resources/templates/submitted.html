@@ -4,22 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, ">
     <title>Thanks!</title>
-    <link href="../../../../../../Desktop/formulario/style.css" rel="stylesheet" />
-    <link rel="icon" type="image/x-icon" href="/media/me.png">
-    <script src="../../../../../../Desktop/formulario/scripts.js"></script>
+
+    <link rel="icon" type="image/x-icon" th:href="@{/media/me.png}">
+    <link th:href="@{/style.css}" rel="stylesheet" />
+    <script  th:src="@{/scripts.css}"></script>
 </head>
 
 <body>
     <h1 class="thanks-text">Thanks for your time!</h1>
-    <img src="../../../../../../Desktop/formulario/media/toothless-dancing.gif" class="gif"></img>
-    <n class="invite">Check out some of my platforms:</n>
+    <img th:src="@{/media/toothless-dancing.gif}" class="gif"></img>
+    <b class="invite">Check out some of my platforms:</b>
     <div class="image-container">
         <a href="https://www.linkedin.com/in/daniel-herrera-urbano-a1170428b/?trk=opento_sprofile_details"
-            target="_blank"><img src="../../../../../../Desktop/formulario/media/linkedn.png" class="icon" id="icon-l"></img></a>
-        <a href="https://github.com/daniherurb" target="_blank"><img src="../../../../../../Desktop/formulario/media/github.png" class="icon"></img></a>
-        <img src="../../../../../../Desktop/formulario/media/x.jpg" class="icon" id="icon-x" onmouseover="dissapearX()"></img>
+            target="_blank">< th:src="@{/media/linkedn.png}" class="icon" id="icon-l"></a>
+        <a href="https://github.com/daniherurb" target="_blank"><img th:src="@{/media/github.png}" class="icon"></a>
+        <img th:src="@{/media/x.jpg}" class="icon" id="icon-x" onmouseover="dissapearX()">
         <a href="https://x.com/adictware" target="_blank" class="icon-hover">
-            <img src="../../../../../../Desktop/formulario/media/twitter.png" class="icon" id="icon-t" onmouseleave="appearX()"></img>
+            <img th:src="@{/media/twitter.png}" class="icon" id="icon-t" onmouseleave="appearX()">
         </a>
     </div>
 </body>
